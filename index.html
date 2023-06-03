@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Budget Expense Tracker</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!--======================== Start Nav Bar ==================-->
+<div class="main">
+    <nav>
+        <div class="nav">
+            <h3 class="nav-name" href="./index.html">Budget Expense tracker</h3>
+            <div class="left-list">
+                <ul>
+                    <li><a href="https://ehtisham-personal.web.app/" target="_blank">My All Projects</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--======================== Left Side Input Box ==================-->
+    <div class="container">
+
+        <form id="form" class="form">
+            <h1 class="Head" id="Head">Your Budget</h1>
+            <div class="Budget">
+                <h3>Enter Your Budget: </h3>
+                <input type="number" id="budget" placeholder="Enter Total Amount">
+
+            </div>
+            <input type="button" value="Add value" class="btn" id="btn" onclick="printVal()" required>
+        </form>
+        
+
+        <!--======================== Right Side Input Box ==================-->
+
+        <form id="form-two" class="form-two">
+            <h2 class="Head" id="expenseHead">Services or expeses</h2>
+            <div class="expense" id="expense">
+                <h3>Select Category:</h3>
+                <select class="category" id="category">
+                    <option></option>
+                    <option>Burger</option>
+                    <option>Pizza</option>
+                    <option>Seafood</option>
+                    <option>Pasta dishes</option>
+                    <option>Coffee and tea</option>
+                    <option>Breakfast menu</option>
+                    <option>Brunch options</option>
+                    <option>Lunch specials</option>
+                    <option>Dinner specials</option>
+                </select>
+                <h3>Enter Description</h3>
+                <div class="descrip" id="descrip">
+                    <input type="text" id="description" class="description" placeholder="Enter Description" required>
+                </div>
+                <div class="total" id="total">
+                    <h3>Total Amount:</h3>
+                    <input type="number" class="totalAmount" id="total-amount" placeholder="Enter Amount" required>
+                </div>
+
+                <div class="time" id="time">
+                    <h3>Select Date</h3>
+                    <input type="date" name="date" id="currDate" class="totalBudget" required>
+                </div>
+            </div>
+            <input type="button" value="Add Budget" class="btn" onclick="expense()">
+        </form>
+
+    </div>
+
+    <section>
+        <div class="boxes">
+            <div class="box" id="boxOne">
+                <h4> Amount</h4>
+                <span id="totalValue">$0.00</span>
+            </div>
+            <div class="box" id="boxTwo">
+                <h4>Expense</h4>
+                <span id="expense-value">$0.00</span>
+            </div>
+            <div class="box" id="boxThree">
+                <h4>Balance</h4>
+                <span id="currBal">$0.00</span>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h3 id="to-head">
+            Expense List
+        </h3>
+        <div class="todo-parent">
+            <ul id="todo-list" class="list">
+
+            </ul>
+        </div>
+    </section>
+</div>
+</body>
+<script src="./assets/js/main.js" defer></script>
+<script src="https://kit.fontawesome.com/a8a65d2bf6.js" crossorigin="anonymous" defer></script>
+</html>
